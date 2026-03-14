@@ -1,0 +1,19 @@
+:root {
+    --bg: #222831;
+    --second: #e6e1da;
+}
+
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+    background-color: var(--bg);
+}
+
+#flag {
+    height: 10vh;
+    width: auto;
+    padding: 0;
+    position: fixed;
+}
