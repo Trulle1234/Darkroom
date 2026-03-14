@@ -27,7 +27,7 @@
 
             <p id="description">
                 Build something photography related<br>
-                Get Cameras, Gear, film and other cool stuff!
+                Get cameras, gear, film and other cool stuff!
             </p>
         </div>
     </div>
