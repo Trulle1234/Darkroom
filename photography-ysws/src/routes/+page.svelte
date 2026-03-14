@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
     import { onMount } from 'svelte';
-    import { blur, crossfade, draw, fade, fly, scale, slide } from 'svelte/transition';
+    import { blur } from 'svelte/transition';
 
 	let show = $state(false);
 
