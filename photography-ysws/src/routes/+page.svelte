@@ -32,3 +32,25 @@
         </div>
     </div>
 {/if}
+
+
+<img 
+    src="https://cdn.hackclub.com/019cf2b0-6906-7246-8451-490d4e152f0d/wave.svg"
+    alt="Wave"
+    id="wave"
+/>
+
+<div id="dark">
+    <h6 id="get">Get stuff like:</h6>
+    
+    <div id="polaroid-grid">
+        {#each { length: 6 }}
+            <img 
+                src="https://cdn.hackclub.com/019cf277-b514-7a8f-96f5-c33a5dc49504/polaroid.svg"
+                alt="Polaroid"
+                class="polaroid"
+                id="polaroid-1"
+            />
+        {/each}
+    </div>
+</div>

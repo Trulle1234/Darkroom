@@ -1,6 +1,6 @@
 :root {
-    --bg: #222831;
-    --main: #e6e1da;
+  --bg: #222831;
+  --main: #e6e1da;
 }
 
 @font-face {
@@ -37,44 +37,89 @@
   font-display: swap;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
-    background-color: var(--bg);
-    font-family: "Phantom Sans", sans-serif;
-    color: var(--main);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
 
-    background: var(--bg);
+body {
+  min-height: 200vh;
+  background: var(--bg);
+  color: var(--main);
+  font-family: "Phantom Sans", sans-serif;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #flag {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    border: 0;
-    width: 256px;
-    z-index: 999;
+  position: fixed;
+  top: 1.25rem;
+  left: 0;
+  border: 0;
+  width: 16rem;
+  z-index: 999;
 }
 
 #main {
-    display: flex;
-    justify-content: center;
-    margin-top: 256px;
+  display: flex;
+  justify-content: center;
+  margin-top: 16rem;
 }
 
 #hero {
-    display: inline-block;
+  display: inline-block;
 }
 
 #title {
-    margin: 0;
-    font-size: 128px;
-    text-align: left;
+  margin: 0;
+  font-size: clamp(4rem, 10vw, 8.75rem);
+  text-align: left;
+  line-height: 0.95;
 }
 
 #description {
-    margin-top: 16px;
-    font-family: "Phantom Sans", sans-serif;
-    font-size: 32px;
-    text-align: left;
+  margin-top: 1rem;
+  font-size: clamp(1.25rem, 2.5vw, 2.375rem);
+  text-align: left;
+}
+
+#wave {
+  margin-top: 5rem;
+  filter: brightness(115%);
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+
+  z-index: -1;
+}
+
+#dark {
+  background-color: #1a2027;
+  margin-top: -10px;
+  min-height: 31.25rem;
+
+  flex: 1;
+}
+
+#get {
+  margin-top: -1em;
+  margin-left: 2em;
+  font-size: clamp(2rem, 8vw, 4rem);
+  text-align: left;
+}
+
+#polaroid-grid {
+  margin-top: -6em;
+  margin-left: 5.5em;
+}
+
+.polaroid {
+  height: 500px;
+  z-index: 99;
+  margin-bottom: 5em;
 }
