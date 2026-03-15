@@ -17,10 +17,16 @@
 			"Printed Photos", "A grant to print your photos"],
 		["https://user-cdn.hackclub-assets.com/019cf3ab-4853-70fe-b981-c9e504397c82/kodak_chamera_crop.png",
 			"Kodak Charmera", "Kodak Charmera - A keychain camera"],
-		["", "", "Placeholder"],
-		["", "", "Placeholder"],
+		// not done below here
+		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png",
+			"Placeholder", "Placeholder"],
+		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png",
+			"Placeholder", "Placeholder"],
+		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png",
+			"Placeholder", "Placeholder"],
+		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png",
+			"Placeholder", "Placeholder"],
 	];
-
 </script>
 
 <a href="https://hackclub.com/">
@@ -55,7 +61,11 @@
 
 		<div id="polaroid-grid">
 			{#each items as [url, alt, desc]}
-				<div class="polaroid-wrap">
+				<div class="polaroid-wrap" style="transform: rotate(
+					{Math.random() < 0.4
+						? -(Math.random() * 5 + 5)
+						: Math.random() * 5 + 5}deg);">
+						
 					<img
 						src={url}
 						alt={alt}

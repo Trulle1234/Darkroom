@@ -147,7 +147,7 @@ body {
   height: 500px;
   z-index: 10;
   margin-bottom: 5em;
-  filter: brightness(90%);
+  filter: brightness(95%) sepia(10%);
   display: block;
   user-select: none;
   -webkit-user-select: none;
@@ -157,6 +157,11 @@ body {
   position: absolute;
   width: 100%;
   z-index: 0;
+
+  filter: brightness(95%) sepia(30%) saturate(130%);
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .polaroid-text {
