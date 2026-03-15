@@ -40,7 +40,7 @@
 		<i id="det-disclaimer">*This is subject to change!</i>
 		
 		<div id="polaroid-grid">
-			{#each Array(6) as _, i}
+			{#each Array(8) as _, i}
 				<img 
 					src="https://cdn.hackclub.com/019cf277-b514-7a8f-96f5-c33a5dc49504/polaroid.svg"
 					alt="Polaroid"
