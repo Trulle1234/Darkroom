@@ -1,5 +1,6 @@
 :root {
   --bg: #222831;
+  --dark: #1a2027;
   --main: #e6e1da;
 }
 
@@ -41,7 +42,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
 }
 
 body {
@@ -111,7 +111,7 @@ body {
 }
 
 #dark {
-  background-color: #1a2027;
+  background-color: var(--dark);
   margin-top: -10px;
   min-height: 31.25rem;
 
@@ -180,4 +180,16 @@ body {
 
   margin: 0;
   z-index: 11;
+}
+
+#faq-head {
+  font-size: clamp(5rem, 6vw, 8rem);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
