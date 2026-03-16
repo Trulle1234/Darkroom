@@ -17,16 +17,20 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: photography-ysws
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: photography-ysws/package-lock.json
 
       - name: setup pages
         uses: actions/configure-pages@v5
@@ -42,7 +46,7 @@ jobs:
       - name: upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: build
+          path: photography-ysws/build
 
   deploy:
     environment:
