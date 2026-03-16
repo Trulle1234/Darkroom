@@ -181,7 +181,7 @@ body {
 }
 
 #get {
-  margin-top: 1em;
+  margin-top: -0.1em;
   margin-left: 12rem;
   font-size: clamp(3.5rem, 8vw, 6.2rem);
   text-align: left;
