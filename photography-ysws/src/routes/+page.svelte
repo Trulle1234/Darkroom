@@ -80,7 +80,7 @@
 		</p>
 		
 		<div id="buttons">
-			<a href="https://trulle123.fillout.com/darkroom-rsvp" class="button">RSVP</a>
+			<a href="https://trulle123.fillout.com/darkroom-rsvp" target="_blank" class="button">RSVP</a>
 			<a href="https://hackclub.enterprise.slack.com/archives/C0ALM44RBFU" target="_blank" class="button">Join #darkroom</a>
 		</div>
 	</div>
