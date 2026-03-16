@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { slide, } from "svelte/transition";
 
 	let show = $state(false);
 
@@ -28,14 +29,32 @@
 		];
 
 	let faqs = [
-		["Am I eligible to participate?", "If you are between 13 and 18 your are eligible. You will have to verify your identity to purches stuff in the shop."],
-		["Question", "Answer"],
+		["What is Darkroom?", 
+			"Darkoom is a (prototype) Hack Club YSWS."],
+		["What can i make?",
+			"Anything related to photography! For example: an image editig app, a photo book website or your own camera app."],
+		["Am I eligible to participate?", 
+			"If you are between 13 and 18 your are eligible. You will have to verify your identity to purches stuff in the shop."],
+		["So, what's the catch?",
+			"There is none! Hack Club is a nonprofit who's goal is to help and encourage teens to make projects. I.e it's free witout any drawbacks."],
+		["Can i use AI when making my project?",
+			"We encourage you to do it on your own. But yes, you can use some AI (~30% max)."],
+		["Who is running this?",
+			"Darkroom is a part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a prototype YSWS by Trulle123!"]
 	];
 
 	let openIndex: number | null = $state(null);
 
 	function toggle(index: number) {
-		openIndex = openIndex === index ? null : index;
+		if (openIndex === index) {
+			openIndex = null;
+		} else {
+			openIndex = index;
+			window.scrollTo({
+				top: document.documentElement.scrollHeight,
+				behavior: 'smooth',
+			});
+		}
 	}
 </script>
 
@@ -47,6 +66,10 @@
 	/>
 </a>
 
+<div id="faq-button-div" class:visible={show}>
+	<a href="#faq" id="faq-button">FAQ</a>
+</div>
+
 <div id="main" class:visible={show}>
 	<div id="hero">
 		<h1 id="title">Darkroom</h1>
@@ -55,6 +78,11 @@
 			Build something photography related,<br>
 			Get cameras, gear, film and other cool stuff!
 		</p>
+		
+		<div id="buttons">
+			<a href="https://trulle123.fillout.com/darkroom-rsvp" class="button">RSVP</a>
+			<a href="https://hackclub.enterprise.slack.com/archives/C0ALM44RBFU" target="_blank" class="button">Join #darkroom</a>
+		</div>
 	</div>
 </div>
 
@@ -96,13 +124,13 @@
 		<div id="faq">
 			{#each faqs as [q, a], i}
 				<div class="faq-item">
-					<button onclick={() => toggle(i)}>
-					{q}
-					<span>{openIndex === i ? '▲' : '▼'}</span>
+					<button class="question" onclick={() => toggle(i)}>
+					<span>{q}</span>
+					<span class:open={openIndex === i} class="arrow">▼</span>
 					</button>
 					
 					{#if openIndex === i}
-					<div class="answer">
+					<div class="answer"  transition:slide={{ duration: 280 }}>
 						{a}
 					</div>
 					{/if}
@@ -111,3 +139,7 @@
 		</div>
 	</div>
 </div>
+
+<p id="made-by">Made with ❤︎⁠ by 
+	<a href="https://hackclub.enterprise.slack.com/team/U07904YUJ6A" target="_blank">Trulle123</a>
+	 & <a href="https://hackclub.com/" target="_blank">Hack Club</a></p>
