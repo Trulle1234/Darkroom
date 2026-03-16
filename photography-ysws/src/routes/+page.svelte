@@ -50,10 +50,7 @@
 			openIndex = null;
 		} else {
 			openIndex = index;
-			window.scrollTo({
-				top: document.documentElement.scrollHeight,
-				behavior: 'smooth',
-			});
+			
 		}
 	}
 </script>
@@ -137,9 +134,9 @@
 				</div>			
   			{/each}
 		</div>
+		
+		<p id="made-by">Made with ❤︎⁠ by 
+		<a href="https://hackclub.enterprise.slack.com/team/U07904YUJ6A" target="_blank">Trulle123</a>
+		& <a href="https://hackclub.com/" target="_blank">Hack Club</a></p>
 	</div>
 </div>
-
-<p id="made-by">Made with ❤︎⁠ by 
-	<a href="https://hackclub.enterprise.slack.com/team/U07904YUJ6A" target="_blank">Trulle123</a>
-	 & <a href="https://hackclub.com/" target="_blank">Hack Club</a></p>

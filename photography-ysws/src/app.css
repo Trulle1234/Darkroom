@@ -2,7 +2,7 @@
   --bg: #222831;
   --dark: #1a2027;
   --main: #e6e1da;
-  --height: 147rem;
+  --height: auto;
 }
 
 @font-face {
@@ -236,6 +236,7 @@ body {
   align-items: center;
   gap: 1rem;
   margin-left: 10em;
+  margin-bottom: 5em;
 }
 
 .faq-item {
@@ -286,6 +287,9 @@ body {
   width: 100%;
   font-size: 1.8rem;
   text-align: center;
+  background-color: var(--bg);
+  padding-top: 1.5rem;
+  margin-top: 5rem;
 }
 
 :link {
