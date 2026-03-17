@@ -25,23 +25,23 @@
 		["https://cdn.hackclub.com/019cf63c-be51-7b67-aa1b-aa18b0012a12/film_crop.png",
 			"Film", "Some Instax film, possibly others too"],
 		["https://cdn.hackclub.com/019cf63c-c06e-77ce-90d8-ad3a0f4e9750/digicam_crop.png",
-			"Digicam", "A Digicam, exactly which is tbd"],
+			"Digicam", "A Digicam, exact model tbd"],
 		["https://cdn.hackclub.com/019cf3a4-6360-7cfe-abcc-f1248cd352a7/printed_photps_crop.png",
-			"Printed Photos", "A grant to get your photo printed"],
+			"Printed Photos", "A grant to get your photos printed"],
 		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png", 
 			"Placeholder", "Placeholder"]
 		];
 
 	let faqs = [
 		["What is Darkroom?", 
-			"Darkoom is a (prototype) Hack Club YSWS."],
-		["What can i make?",
-			"Anything related to photography! For example: an image editig app, a photo book website or your own camera app."],
+			"Darkroom is a (prototype) Hack Club YSWS."],
+		["What can I make?",
+			"Anything related to photography! For example: an image editing app, a photo book website or your own camera app."],
 		["Am I eligible to participate?", 
-			"If you are between 13 and 18 your are eligible. You will have to verify your identity to purches stuff in the shop."],
+			"If you are between 13 and 18, you are eligible. You will have to verify your identity to \"purchase\" stuff in the shop."],
 		["So, what's the catch?",
-			"There is none! Hack Club is a nonprofit who's goal is to help and encourage teens to make projects. I.e it's free witout any drawbacks."],
-		["Can i use AI when making my project?",
+			"There is none! Hack Club is a nonprofit whose goal goal is to help and encourage teens to make projects. i.e. it's free without any drawbacks."],
+		["Can I use AI when making my project?",
 			"We encourage you to do it on your own. But yes, you can use some AI (~30% max)."],
 		["Who is running this?",
 			"Darkroom is a part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a prototype YSWS by Trulle123!"]
@@ -77,7 +77,7 @@
 			<h1 id="title">Darkroom</h1>
 
 			<p id="description">
-				Build something photography related,<br>
+				Build something photography-related,<br>
 				Get cameras, gear, film and other cool stuff!
 			</p>
 		</div>
