@@ -40,9 +40,9 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}
+          CUSTOM_DOMAIN: true
         run: npm run build
-
+  
       - name: upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
