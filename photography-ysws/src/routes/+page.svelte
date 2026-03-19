@@ -28,23 +28,27 @@
 			"Digicam", "A Digicam, exact model tbd"],
 		["https://cdn.hackclub.com/019cf3a4-6360-7cfe-abcc-f1248cd352a7/printed_photps_crop.png",
 			"Printed Photos", "A grant to get your photos printed"],
-		["https://cdn.hackclub.com/019cf3c0-970b-7f23-8cc8-29eb8d212ea1/placeholder.png", 
-			"Placeholder", "Placeholder"]
+		["https://cdn.hackclub.com/019d0785-f708-7e61-8bdb-3b8f0c96bac4/cleaning_kit_crop.png", 
+			"Cleaning Kit", "A cleaning kit too tidy up your camera"]
 		];
 
 	let faqs = [
 		["What is Darkroom?", 
 			"Darkroom is a (prototype) Hack Club YSWS."],
-		["What can I make?",
-			"Anything related to photography! For example: an image editing app, a photo book website or your own camera app."],
+		["Who is running this?",
+			"Darkroom is part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a prototype YSWS by Trulle123!"],
 		["Am I eligible to participate?", 
 			"If you are between 13 and 18, you are eligible. You will have to verify your identity to \"purchase\" stuff in the shop."],
-		["So, what's the catch?",
-			"There is none! Hack Club is a nonprofit whose goal goal is to help and encourage teens to make projects. i.e. it's free without any drawbacks."],
+		["Do I need to be experienced?", 
+			"Not at all! You can be new to coding, photography or both. You can always ask for help in the Slack."],
+		["What can I make?",
+			"Anything related to photography! For example: an image editing app, a photo book website or your own camera app."],
+		["What counts as \"shipped\"?",
+			"You must have a public and open-source GitHub repo and a live demo that other people can easily try out."],
 		["Can I use AI when making my project?",
 			"We encourage you to do it on your own. But yes, you can use some AI (~30% max)."],
-		["Who is running this?",
-			"Darkroom is a part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a prototype YSWS by Trulle123!"]
+		["So, what's the catch?",
+			"There is none! Hack Club is a nonprofit whose goal is to help and encourage teens to make projects. I.e. it's free, without any drawbacks."]
 	];
 
 	let openIndex: number | null = $state(null);

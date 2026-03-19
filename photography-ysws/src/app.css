@@ -233,7 +233,7 @@ body {
   transform: translateX(-50%);
   width: 75%;
 
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: 1.2rem;
   text-align: left;
   font-family: "Courier New";
   font-weight: bold;
