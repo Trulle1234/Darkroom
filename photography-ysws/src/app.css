@@ -127,6 +127,8 @@ body {
   margin: 0;
   font-size: clamp(3rem, 10vw, 12rem);
   line-height: 0.95;
+  width: 100%;
+  text-align: center;
 }
 
 #description {
@@ -264,7 +266,7 @@ body {
 
   font-size: 0.9rem;
   line-height: 1.3;
-  text-align: center;
+  text-align: left;
   font-family: "Courier New";
   font-weight: bold;
   color: var(--bg);
@@ -341,12 +343,14 @@ body {
 
 #made-by {
   position: static;
-  width: 100%;
+  width: 100vw;
   font-size: clamp(1rem, 2.8vw, 1.5rem);
   text-align: center;
   background-color: var(--bg);
   padding: 1.25rem 1rem 1rem;
   margin-top: 3rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 :link {
@@ -475,6 +479,9 @@ body {
   #det-disclaimer {
     font-size: clamp(1rem, 1.8vw, 1.5rem);
     margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   #polaroid-grid {
