@@ -55,7 +55,7 @@ body {
 
 body {
   background: var(--bg);
-  color: var(--main);
+   color: var(--main);
   font-family: "Phantom Sans", sans-serif;
   overflow-x: hidden;
   line-height: 1.35;
@@ -118,17 +118,17 @@ body {
 }
 
 #hero-copy {
-  display: inline-block;
-  width: min(100%, 72rem);
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 100%;
 }
 
 #title {
   margin: 0;
   font-size: clamp(3rem, 10vw, 12rem);
   line-height: 0.95;
-  width: 100%;
-  text-align: center;
 }
 
 #description {
@@ -207,39 +207,33 @@ body {
 
 #get {
   margin-top: 0;
-  margin-left: 0;
+  margin-left: 3rem;
   font-size: clamp(3.5rem, 8vw, 6.2rem);
   text-align: left;
   margin-bottom: 0;
 }
 
 #det-disclaimer {
-  margin-left: 0;
+  margin-left: 3rem;
   font-size: clamp(1.7rem, 2.2vw, 2.2rem);
   text-align: left;
 }
 
 #polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 1.5rem;
   margin-top: 3em;
-  margin-left: 0;
+  margin-left: 3rem;
 }
 
 .polaroid-wrap {
   position: relative;
   display: inline-block;
-  width: min(100%, 16rem);
-  margin-right: 0;
-  justify-self: center;
+  margin-right: 2em;
 }
 
 .polaroid {
-  width: 100%;
-  height: auto;
+  height: 20rem;
   z-index: 10;
-  margin-bottom: 1rem;
+  margin-bottom: 5em;
   filter: brightness(95%) sepia(10%);
   display: block;
   user-select: none;
@@ -259,22 +253,20 @@ body {
 
 .polaroid-text {
   position: absolute;
-  bottom: 8%;
-  left: 50%;
+  top: 66%;
+  left: 52%;
   transform: translateX(-50%);
-  width: 85%;
+  width: 75%;
 
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-size: 1.2rem;
   text-align: left;
   font-family: "Courier New";
   font-weight: bold;
   color: var(--bg);
+  filter: blur(0.4px);
 
   margin: 0;
   z-index: 11;
-  word-wrap: break-word;
-  white-space: normal;
 }
 
 #faq-head {
@@ -347,10 +339,15 @@ body {
   font-size: clamp(1rem, 2.8vw, 1.5rem);
   text-align: center;
   background-color: var(--bg);
-  padding: 1.25rem 1rem 1rem;
+  padding: 1.5rem 1rem 1.5rem;
   margin-top: 3rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+
+#cred {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  filter: opacity(70%);
 }
 
 :link {
@@ -388,8 +385,14 @@ body {
     padding: 0 0.75rem;
   }
 
-  #hero {
-    width: 100%;
+  #hero-copy {
+    align-items: center;
+    text-align: center;
+  }
+
+  #title,
+  #description {
+    text-align: center;
   }
 
   #hero-copy {
@@ -420,31 +423,50 @@ body {
   }
 
   #faq-button-div {
-    margin: 0.75rem;
-    padding: 0;
-    justify-content: center;
+    top: 0.2%;
+    right: 3%;
+    position: absolute;
+  }
+
+  #faq-button {
+    font-size: clamp(2rem, 7vw, 3.5rem);
   }
 
   #main {
     margin-top: 0.5rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
   }
 
-  #hero-copy,
-  #title,
-  #description,
-  #get,
-  #det-disclaimer {
+  #hero {
+    width: 100%;
+    align-items: center;
+  }
+
+  #hero-copy {
+    width: min(100%, 26rem);
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   #title {
-    font-size: clamp(2rem, 8vw, 6rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 4rem);
+    line-height: 0.95;
+    text-align: center;
+    text-wrap: balance;
   }
 
   #description {
-    font-size: clamp(1rem, 2.2vw, 2rem);
-    max-width: calc(100vw - 1.5rem);
+    margin-top: 0.75rem;
+    font-size: clamp(1rem, 4.8vw, 1.35rem);
+    line-height: 1.2;
+    max-width: 40ch;
+    text-align: center;
+    text-wrap: pretty;
   }
 
   #buttons {
@@ -474,6 +496,7 @@ body {
   #get {
     font-size: clamp(2rem, 6vw, 4rem);
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   #det-disclaimer {
@@ -485,31 +508,22 @@ body {
   }
 
   #polaroid-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.4rem;
-    margin-top: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .polaroid-wrap {
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
+    margin-top: 3em;
+    margin-left: 2em;
   }
 
   .polaroid {
-    margin-bottom: 0.4rem;
+    height: 9.6rem;
+    margin-bottom: 2em;
   }
 
   .polaroid-text {
-    width: 80%;
-    bottom: 8%;
-    font-size: 0.75rem;
-    line-height: 1.1;
+    position: absolute;
+    top: 67%;
+    left: 52%;
+
+    font-size: 0.7em;
+    filter: blur(0.1px);
   }
 
   #faq-head {

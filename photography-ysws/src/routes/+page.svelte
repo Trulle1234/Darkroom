@@ -145,8 +145,13 @@
   			{/each}
 		</div>
 		
-		<p id="made-by">Made with ❤︎⁠ by 
-		<a href="https://hackclub.enterprise.slack.com/team/U07904YUJ6A" target="_blank">Trulle123</a>
-		& <a href="https://hackclub.com/" target="_blank">Hack Club</a></p>
+		<div id="made-by">Made with ❤︎⁠ by 
+			<a href="https://hackclub.enterprise.slack.com/team/U07904YUJ6A" target="_blank">Trulle123</a>
+			& <a href="https://hackclub.com/" target="_blank">Hack Club</a>
+			<br>
+			<div id="cred">
+				<i>Thanks a lot to <a href="https://github.com/17sdheeraj" target="_blank">Dheeraj</a> for making the UI responsive!</i>
+			</div>
+		</div>
 	</div>
 </div>
