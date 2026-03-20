@@ -44,6 +44,13 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -51,6 +58,7 @@ body {
   color: var(--main);
   font-family: "Phantom Sans", sans-serif;
   overflow-x: hidden;
+  line-height: 1.35;
 
   position: relative;
   min-height: var(--height);
@@ -73,32 +81,25 @@ body {
 
 #flag {
   position: fixed;
-  top: 1.25rem;
+  top: 1rem;
   left: 0;
   border: 0;
-  width: 16rem;
+  width: clamp(8rem, 25vw, 16rem);
   z-index: 999;
 }
 
 #faq-button-div {
-  margin: 2em;
+  margin: clamp(1rem, 3vw, 2rem);
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #faq-button {
-  font-size: 3.2rem;
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
   font-weight: bold;
   text-decoration: none;
   padding: 0.1em;
-}
-
-#main {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-  padding: 0 1.5rem;
 }
 
 #main {
@@ -113,19 +114,21 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  max-width: 100%;
+  width: min(100%, 72rem);
 }
 
 #hero-copy {
   display: inline-block;
-  max-width: 100%;
+  width: min(100%, 72rem);
   text-align: left;
 }
 
 #title {
   margin: 0;
-  font-size: clamp(4.5rem, 10vw, 12rem);
+  font-size: clamp(3rem, 10vw, 12rem);
   line-height: 0.95;
+  width: 100%;
+  text-align: center;
 }
 
 #description {
@@ -147,21 +150,37 @@ body {
 
 .button {
   display: inline-block;
-  font-size: 2.6rem;
+  font-size: clamp(1.1rem, 3.2vw, 2.6rem);
   font-weight: bold;
   text-decoration: none;
 
   padding: 0.5em 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0;
 
   background-color: var(--dark);
   color: white;
   border: 0.05em solid var(--dark);
   border-radius: 0.8em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: var(--main);
+  color: var(--dark);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 #wave {
+  display: block;
+  width: 100%;
+  height: auto;
   margin-top: 3rem;
   filter: brightness(115%);
 
@@ -180,35 +199,47 @@ body {
   flex: 1;
 }
 
+#dark > div {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
 #get {
-  margin-top: -0.1em;
-  margin-left: 12rem;
+  margin-top: 0;
+  margin-left: 0;
   font-size: clamp(3.5rem, 8vw, 6.2rem);
   text-align: left;
   margin-bottom: 0;
 }
 
 #det-disclaimer {
-  margin-left: 12rem;
+  margin-left: 0;
   font-size: clamp(1.7rem, 2.2vw, 2.2rem);
   text-align: left;
 }
 
 #polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
   margin-top: 3em;
-  margin-left: 10rem;
+  margin-left: 0;
 }
 
 .polaroid-wrap {
   position: relative;
   display: inline-block;
-  margin-right: 2em;
+  width: min(100%, 16rem);
+  margin-right: 0;
+  justify-self: center;
 }
 
 .polaroid {
-  height: 20rem;
+  width: 100%;
+  height: auto;
   z-index: 10;
-  margin-bottom: 5em;
+  margin-bottom: 1rem;
   filter: brightness(95%) sepia(10%);
   display: block;
   user-select: none;
@@ -228,20 +259,22 @@ body {
 
 .polaroid-text {
   position: absolute;
-  top: 66%;
-  left: 52%;
+  bottom: 8%;
+  left: 50%;
   transform: translateX(-50%);
-  width: 75%;
+  width: 85%;
 
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
   text-align: left;
   font-family: "Courier New";
   font-weight: bold;
   color: var(--bg);
-  filter: blur(0.4px);
 
   margin: 0;
   z-index: 11;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 #faq-head {
@@ -256,13 +289,18 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-left: 10em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 5em;
 }
 
 .faq-item {
-  width: min(40rem, 100%);
+  width: min(100%, 52rem);
+  padding: 0 1rem;
 }
+
+
 
 .arrow {
   display: inline-block;
@@ -288,7 +326,7 @@ body {
   cursor: pointer;
   border-radius: 0.5rem;
   transition: transform 0.18s ease, opacity 0.18s ease;
-  margin-left: -2.5em;
+  margin-left: 0;
 }
 
 .answer {
@@ -296,8 +334,8 @@ body {
   font-size: clamp(0.95rem, 1.3vw, 1.3rem);
   font-family: "Phantom Sans", sans-serif;
   padding: 0.7em 0.9em 0.2em 0.9em;
-  margin-left: -4em;
-  margin-right: 2em;
+  margin-left: 0;
+  margin-right: 0;
   text-align: left;
   line-height: 1.5;
   opacity: 0.95;
@@ -305,12 +343,14 @@ body {
 
 #made-by {
   position: static;
-  width: 100%;
-  font-size: 1.5rem;
+  width: 100vw;
+  font-size: clamp(1rem, 2.8vw, 1.5rem);
   text-align: center;
   background-color: var(--bg);
-  padding-top: 1.5rem;
-  margin-top: 5rem;
+  padding: 1.25rem 1rem 1rem;
+  margin-top: 3rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 :link {
@@ -319,4 +359,171 @@ body {
 
 :visited {
   color: var(--main);
+}
+
+@media (max-width: 900px) {
+  #main {
+    margin-top: 2.5rem;
+  }
+
+  #buttons {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #dark > div {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  #dark > div {
+    width: min(100%, 90vw);
+    padding: 0 0.75rem;
+  }
+
+  #hero {
+    width: 100%;
+  }
+
+  #hero-copy {
+    width: 100%;
+  }
+
+  #get,
+  #det-disclaimer {
+    text-align: center;
+  }
+
+  #polaroid-grid {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1.2rem;
+  }
+
+  .polaroid-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #flag {
+    position: static;
+    display: block;
+    margin: 0.75rem auto 0;
+    width: 10rem;
+  }
+
+  #faq-button-div {
+    margin: 0.75rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  #main {
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  #hero-copy,
+  #title,
+  #description,
+  #get,
+  #det-disclaimer {
+    text-align: center;
+  }
+
+  #title {
+    font-size: clamp(2rem, 8vw, 6rem);
+  }
+
+  #description {
+    font-size: clamp(1rem, 2.2vw, 2rem);
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  #buttons {
+    flex-direction: column;
+    width: min(100%, 22rem);
+    margin: 0 auto;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(0.95rem, 4.2vw, 1.2rem);
+    padding: 0.6em 0.8em;
+  }
+
+  #dark > div {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 0.25rem;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #get {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  #det-disclaimer {
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #polaroid-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .polaroid-wrap {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .polaroid {
+    margin-bottom: 0.4rem;
+  }
+
+  .polaroid-text {
+    width: 80%;
+    bottom: 8%;
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+
+  #faq-head {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-top: 2rem;
+  }
+
+  .question {
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    padding: 0.6em 0.8em;
+  }
+
+  .answer {
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    padding: 0.6em 0.8em 0.2em;
+  }
 }
