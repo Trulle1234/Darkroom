@@ -34,9 +34,9 @@
 
 	let faqs = [
 		["What is Darkroom?", 
-			"Darkroom is a (prototype) Hack Club YSWS."],
+			"Darkroom is a (draft) Hack Club You Ship We Ship."],
 		["Who is running this?",
-			"Darkroom is part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a prototype YSWS by Trulle123!"],
+			"Darkroom is part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a (draft) YSWS by Trulle123!"],
 		["Am I eligible to participate?", 
 			"If you are between 13 and 18, you are eligible. You will have to verify your identity to \"purchase\" stuff in the shop."],
 		["Do I need to be experienced?", 
