@@ -34,15 +34,15 @@
 
 	let faqs = [
 		["What is Darkroom?", 
-			"Darkroom is a (draft) Hack Club You Ship We Ship."],
+			"Darkroom is a Hack Club You Ship We Ship where you build something photography-related and get prizes."],
 		["Who is running this?",
-			"Darkroom is part of Hack Club, a 501(c)(3) nonprofit organization. Darkroom is a (draft) YSWS by Trulle123!"],
+			"Darkroom is part of Hack Club, a 501(c)(3) nonprofit organization. It's being ran by Trulle123!"],
 		["Am I eligible to participate?", 
 			"If you are between 13 and 18, you are eligible. You will have to verify your identity to \"purchase\" stuff in the shop."],
 		["Do I need to be experienced?", 
-			"Not at all! You can be new to coding, photography, or both. You can always ask for help in the Slack."],
+			"Not at all! You can be new to coding, photography, or both. You can always ask for help in the Slack channel."],
 		["What can I make?",
-			"Anything related to photography! For example: an image-editing app, a photobook website, or your own camera app."],
+			"Anything related to photography! For example: an image-editing app, a photobook website, your own camera app or whatever else you like."],
 		["What counts as \"shipped\"?",
 			"You must have a public and open-source GitHub repo and a live demo that other people can easily try out."],
 		["Can I use AI when making my project?",
@@ -82,7 +82,8 @@
 
 			<p id="description">
 				Build something photography-related,<br>
-				Get cameras, gear, film and other cool stuff!
+				Get cameras, gear, film and other cool stuff!<br><br>
+				<strong>Starting soon!</strong>
 			</p>
 		</div>
 		
